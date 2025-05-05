@@ -1,1 +1,3 @@
-# notes-javascript
+# Notes Javascript
+
+Learn Javascript notes
