@@ -44,6 +44,32 @@ for (let i = 1; i <= 100; i++) {
     }
 }
 
+function drawLine(chars, sign_1, sign_2) {
+    let line = ""
+    for (let j = 1; j <= chars; j++) {
+        if (j % 2 === 0) {
+            line += sign_1
+        } else {
+            line += sign_2
+        }
+    }
+    return line
+}
+
+function draw_field(lines, chars_per_line) {
+    for (let i = 1; i <= lines; i++) {
+        if (i % 2 === 0) {
+            const line = drawLine(chars_per_line, " ", "#")
+            console.log(line)
+        } else {
+            const line = drawLine(chars_per_line, "#", " ")
+            console.log(line)
+        }
+    }
+
+
+}
+
 const chars_per_line = 10
 const lines = 10
 
@@ -73,3 +99,5 @@ for (let i = 1; i <= lines; i++) {
 
 
 
+console.log("Wih function")
+draw_field(4, 10)
