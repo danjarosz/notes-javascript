@@ -67,3 +67,36 @@ repeat(5, n => {
 });
 // → 0 is even
 // → 2 is even
+
+//--------------------
+
+function reduce(array, combine, start) {
+    let current = start;
+    for (let element of array) {
+        current = combine(current, element);
+    }
+    return current;
+}
+
+console.log(reduce([1, 2, 3, 4], (a, b) => a + b, 0));
+// → 10
+
+//-------
+// Two emoji characters, horse and shoe
+let horseShoe = "🐴👟";
+console.log(horseShoe.length);
+// → 4
+console.log(horseShoe[0]);
+// → (Invalid half-character)
+console.log(horseShoe.charCodeAt(0));
+// → 55357 (Code of the half-character)
+console.log(horseShoe.codePointAt(0));
+// → 128052 (Actual code for horse emoji)
+
+
+let roseDragon = "🌹🐉";
+for (let char of roseDragon) {
+    console.log(char);
+}
+// → 🌹
+// → 🐉
