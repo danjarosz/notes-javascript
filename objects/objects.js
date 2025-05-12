@@ -97,3 +97,10 @@ console.log("Is toString's age known?", "toString" in ages);
 // → Is toString's age known? true
 
 console.log("toString" in Object.create(null));
+
+//-----------------
+
+let frozenObject = Object.freeze({value: 5});
+frozenObject.value = 10;
+console.log(frozenObject.value);
+// → 5
